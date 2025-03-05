@@ -1,0 +1,137 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap');*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+body {
+    background-color: #FBF0E8;
+    color: #3A4058;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3A4058;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 24px;
+    position: fixed;
+    border-bottom-style: groove;
+    border-bottom-width: 5px;
+    border-bottom-color: #F5CF67;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+    background-color: #F5CF67;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container {
+    width: auto;
+    margin-top: 80px;
+    flex: 1;
+    padding-bottom: 60px; /* Добавляем пространство, равное высоте футера */
+}
+
+.section {
+    color: #FBF0E8;
+    max-width: 700px;
+    width: auto;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: groove;
+    background-color: #3A4058;
+    border-color: #F5CF67;
+}
+
+.section:nth-child(even) {
+    background-color: #F5CF67;
+    color: #3A4058;
+    border-color: #3A4058;
+}
+
+.section:nth-child(odd) {
+    background-color: #3A4058;
+    color: white;
+    border-color: #F5CF67;
+}
+
+.content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.section.image {
+    max-width: 90%;
+}
+
+.section div {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Отступы между изображениями */
+    flex-wrap: wrap; /* Чтобы адаптировались на маленьких экранах */
+    /*max-width: 90%; !* Увеличиваем ширину контейнера *!*/
+    width: auto;
+    margin: auto; /* Центрируем контейнер */
+}
+
+.section .content img {
+    width: 30%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.section.square .content  img {
+    width: 30%;
+    max-width: 300px;
+}
+
+footer {
+    background-color: #3A4058;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: #F5CF67;
+    border-top-width: 5px;
+    border-top-style: groove;
+}
+
+@media (max-width: 900px) {
+    .section .content img {
+        width: 100%;
+    }
+}
